@@ -7,21 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Your Tasks </h1>
-    <div id = "status-bar">
-        <div id = "total-status" class = "status">
-            <p>Total</p>
-            <p>0</p>
-        </div>
-        <div id = "completed-status" class = "status">
-            <p>Completed</p>
-            <p>0</p>
-        </div>
-        <div id = "pending-status" class = "status">
-            <p>Pending</p>
-            <p>0</p>
+
+    <div id = "main-page">
+        <h1 id = "header"> Your Tasks </h1>
+        <div id = "status-bar">
+            <div class = "total-status-section" >
+                <div class = "circle"></div>
+                <p class = "status-text">Total</p>
+                <p id = "total number" class="status-number">0</p>
+            </div>
+            <div class = "completed-status-section" >
+                <div class = "circle green-version"></div>
+                <p class = "status-text">Completed</p>
+                <p id = "total number" class="status-number">0</p>
+            </div>
+            <div class = "pending-status-section" >
+                <div class = "circle gray-version"></div>
+                <p class = "status-text">Pending</p>
+                <p id = "total number" class="status-number">0</p>
+            </div>
         </div>
     </div>
+
 
     <script src = "script.js"></script>
 </body>
