@@ -114,3 +114,55 @@ body {
     justify-content: space-between;
     margin-top: 50px
 }
+
+#task-container {
+    display: flex;
+    margin-top: 50px;
+    align-items: top;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    
+}
+
+#task-checkbox {
+    transform: scale(1.5);
+}
+
+#task-content {
+    margin-left: 20px;
+    width: 160px;
+    
+}
+
+#task-title {
+    font-size: 20px;
+    margin-top: 0px
+}
+
+#task-bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+#task-date {
+    color:rgb(178, 172, 172)
+}
+
+#oval-shape {
+    width: fit-content;
+    height: 30px;
+    background-color: rgb(226, 223, 223);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px
+}
+ 
+#task-status {
+    display: inline-block;
+    color:rgb(132, 132, 132)
+}
