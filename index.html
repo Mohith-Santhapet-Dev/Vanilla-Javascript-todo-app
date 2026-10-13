@@ -30,7 +30,7 @@
 
         <div id = "add-task-section">
             <input id = "task-input" placeholder="What needs to be done?">
-            <button id = "add-task-btn"> + Add Task</button>
+            <button id = "addtask-btn" onclick = "addTask()"> + Add Task</button>
         </div>
 
         <div id = "filter-buttons">
@@ -38,19 +38,25 @@
             <button id = "pending-button" class = "filter-button"> Pending </button>
             <button id = "completed-button" class = "filter-button"> Completed </button>
         </div>
-
-        <div id = "task-container">
-            <input type = "checkbox" id = "task-checkbox">
-            <div id = "task-content">
-                <h1 id = "task-title"> Task 1</h1>
-                <div id = "task-bottom-section">
-                    <p id = "task-date">9:30</p>
-                    <div id = "oval-shape">
-                        <p id = "task-status"> Pending </p>
+        <template id = "js-task">
+            <div id = "task-container">
+                <input type = "checkbox" id = "task-checkbox">
+                <div id = "task-content">
+                    <h1 id = "task-title"></h1>
+                    <div id = "task-bottom-section">
+                        <p id = "task-date">9:30</p>
+                        <div id = "oval-shape">
+                            <p id = "task-status"> Pending </p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </template>
+        <div id = "tasks-section">
+
         </div>
+
+
     </div>
 
 
