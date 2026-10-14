@@ -62,6 +62,22 @@ body {
     
 }
 
+.task-styles {
+    display: flex;
+    margin-top: 50px;
+    align-items: top;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    
+}
+
+.task-styles.checked {
+    border-width: 3px;
+    border-style: solid;
+    border-color: green;
+}
+
 #main-page {
     margin-left: 300px;
     margin-right: 350px;
@@ -115,15 +131,8 @@ body {
     margin-top: 50px
 }
 
-#task-container {
-    display: flex;
-    margin-top: 50px;
-    align-items: top;
-    background-color: white;
-    padding: 20px;
-    border-radius: 30px;
-    
-}
+
+
 
 #task-checkbox {
     transform: scale(1.5);
