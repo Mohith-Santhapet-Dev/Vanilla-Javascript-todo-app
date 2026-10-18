@@ -9,6 +9,7 @@ const pendingNumberElement = document.querySelector("#pending-number")
 
 let total = Number(totalNumberElement.innerHTML)
 let pending = Number(pendingNumberElement.innerHTML)
+let completed = Number(completedNumberElement.innerHTML)
 
 function addTask() {
     let taskName = inputElement.value;
@@ -36,26 +37,24 @@ function addTask() {
 }
 
 function finishTask(checkbox) {
-    const currentTask = checkbox.closest(".task-styles");
+  const currentTask = checkbox.closest(".task-styles");
 
-    const taskName = currentTask.querySelector("#task-title").textContent;
-    const taskDate = currentTask.querySelector("#task-date").textContent;
+  completed += 1;
+  pending -= 1;
+  completedNumberElement.innerHTML = completed;
+  pendingNumberElement.innerHTML = pending;
 
-    let clone;
-    if (currentTask.classList.contains("checked")) {
-        clone = document.querySelector("#js-task").content.cloneNode(true);
-    } else {
-        clone = document.querySelector("#js-complete-task").content.cloneNode(true);
-    }
+  const taskName = currentTask.querySelector("#task-title").textContent;
+  const taskDate = currentTask.querySelector("#task-date").textContent;
 
-    clone.querySelector("#task-title").textContent = taskName;
-    clone.querySelector("#task-date").textContent = taskDate;
+  const clone = document.querySelector("#js-complete-task").content.cloneNode(true);
 
-    const newCheckbox = clone.querySelector("#task-checkbox");
+  clone.querySelector("#task-title").textContent = taskName;
+  clone.querySelector("#task-date").textContent = taskDate;
 
-    newCheckbox.addEventListener("change", function () {
-        finishTask(newCheckbox);
-    });
+  const newCheckbox = clone.querySelector("#task-checkbox");
+  newCheckbox.checked = true;
+  newCheckbox.disabled = true;
 
-    currentTask.replaceWith(clone);
+  currentTask.replaceWith(clone);
 }
